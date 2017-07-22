@@ -1,7 +1,7 @@
 (function() {
   function SongPlayer() {
     var SongPlayer = {};
-    var currentSong = null;
+    SongPlayer.currentSong = null;
   /**
   * @desc Buzz object audio file
   * @type {Object}
@@ -16,14 +16,14 @@
     var setSong = function(song) {
       if (currentBuzzObject) {
         currentBuzzObject.stop();
-        currentSong.playing = null;
+        SongPlayer.currentSong.playing = null;
       }
       currentBuzzObject = new buzz.sound(song.audioUrl, {
         formats: ['mp3'],
         preload: true
       });
 
-      currentSong = song;
+      SongPlayer.currentSong = song;
     };
 
     var playSong = function(song) {
