@@ -50,6 +50,9 @@
       } else if (SongPlayer.currentSong === song && SongPlayer.currentSong) {
         if (currentBuzzObject.isPaused()) {
           currentBuzzObject.play();
+          playSong(SongPlayer.currentSong);
+        } else {
+          SongPlayer.pause();
         }
       }
     };
