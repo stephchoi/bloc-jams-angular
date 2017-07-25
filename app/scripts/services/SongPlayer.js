@@ -44,10 +44,10 @@
 
     SongPlayer.play = function(song) {
       song = song || SongPlayer.currentSong;
-      if (currentSong !== song) {
+      if (SongPlayer.currentSong !== song) {
         setSong(song);
         playSong(song);
-      } else if (currentSong === song) {
+      } else if (SongPlayer.currentSong === song) {
         if (currentBuzzObject.isPaused()) {
           currentBuzzObject.play();
         }
@@ -93,4 +93,4 @@
   angular
     .module('blocJams')
     .factory('SongPlayer', ['Fixtures', SongPlayer]);
-})
+})();
