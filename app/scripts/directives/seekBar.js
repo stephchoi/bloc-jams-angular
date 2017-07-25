@@ -10,7 +10,7 @@
     };
 
     return {
-      templateUrl: '/template/directives/seek_bar.html',
+      templateUrl: '/templates/directives/seek_bar.html',
       replace: true,
       restrict: 'E',
       scope: { },
@@ -59,4 +59,4 @@
   angular
     .module('blocJams')
     .directive('seekBar', ['$document', seekBar])
-});
+})();
