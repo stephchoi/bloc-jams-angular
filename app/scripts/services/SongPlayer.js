@@ -1,7 +1,7 @@
 (function() {
   function SongPlayer(Fixtures) {
     var SongPlayer = {};
-    var currentAlbum = Fixtures.getAlbum;
+    var currentAlbum = Fixtures.getAlbum();
 
     var getSongIndex = function(song) {
       return currentAlbum.songs.indexOf(song);
