@@ -19,6 +19,9 @@
     **/
     SongPlayer.currentTime = null;
 
+/*Default volume is 60*/
+    SongPlayer.volume = 60;
+
     var currentBuzzObject = null;
 
   /**
@@ -115,6 +118,12 @@
      if (currentBuzzObject) {
        currentBuzzObject.setTime(time);
      }
+   };
+
+/*Sets volume on a scale of 0-100*/
+   SongPlayer.setVolume = function(volume) {
+
+     currentBuzzObject.setVolume(volume)
    };
 
     return SongPlayer;
