@@ -12,6 +12,13 @@
   * @type {Object}
   */
     SongPlayer.currentSong = null;
+
+    /**
+    *@desc Current playback time (sec) of currently playing song.
+    *@type {number}
+    **/
+    SongPlayer.currentTime = null;
+
     var currentBuzzObject = null;
 
   /**
