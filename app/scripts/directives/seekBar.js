@@ -57,10 +57,11 @@
             notifyOnChange(scope.value);
           };
 
+      /*Updates thumb/fill as you drag icon*/
           scope.trackThumb = function() {
             $document.bind('mousemove.thumb', function(event) {
               var percent = calculatePercent(seekBar, event);
-              scope.$apply(function() {
+              scope.$apply( function(){
                 scope.value = percent * scope.max;
                 notifyOnChange(scope.value);
               });
