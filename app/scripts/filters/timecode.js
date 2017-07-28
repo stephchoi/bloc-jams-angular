@@ -3,7 +3,7 @@
     return function(seconds) {
       var seconds = Number.parseFloat(seconds);
 
-      if (Number.isNaN(seconds)) {
+/*      if (Number.isNaN(seconds)) {
         return '-:--';
       }
 
@@ -13,14 +13,16 @@
 
       var output = minutes + ':';
 
-    /*Adds placeholder 0 for when seconds are single digit #s*/
+    /*Adds placeholder 0 for when seconds are single digit #s
       if(remainingSeconds < 10) {
         output += '0'
       }
 
       output += remainingSeconds;
 
-      return output;
+      return output;*/
+
+      return buzz.toTimer(seconds);
     };
   }
 
